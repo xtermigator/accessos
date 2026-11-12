@@ -1,0 +1,13 @@
+{
+  "name": "accessos",
+  "version": "0.1.0",
+  "description": "AccessOS: an accessibility-first shopping agent with Airwallex intent-bound virtual cards (Airwallex Agentic Banking Hackathon, Kit 2).",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/run-demo.js",
+    "serve": "python3 -m http.server 8080"
+  }
+}

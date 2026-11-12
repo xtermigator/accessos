@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AccessOS – shopping help that asks before it pays</title>
+  <meta name="description" content="AccessOS: an AI shopping agent for people with ADHD and other invisible disabilities. Payment is locked to what you approved, using Airwallex virtual cards.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">◎</span>
+      <span>AccessOS</span>
+    </div>
+    <div class="controls">
+      <span id="mode" class="mode" title="This demo uses test money only">Test mode: SANDBOX-MOCK</span>
+      <label class="switch">
+        <input type="checkbox" id="simplify">
+        <span>Too much? Simplify</span>
+      </label>
+      <label class="switch detail">
+        <input type="checkbox" id="showlog" checked>
+        <span>Show agent log</span>
+      </label>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main id="main" tabindex="-1">
+      <p id="progress" class="progress" aria-live="polite"></p>
+      <section id="screen" aria-live="polite"></section>
+    </main>
+
+    <aside id="logpanel" class="log" aria-labelledby="logtitle" tabindex="0">
+      <h2 id="logtitle">What the agent did</h2>
+      <p class="small">Goal, plan, new info, revised decision, payment. Every step is recorded.</p>
+      <ol id="log" class="loglist"></ol>
+    </aside>
+  </div>
+
+  <footer class="foot">
+    <p>Demo for the Airwallex Agentic Banking Hackathon. Test money only. Product facts link to their source pages (snapshot Nov 11, 2026). Shipping and delivery days are demo assumptions.</p>
+    <p class="detail">
+      <label class="switch"><input type="checkbox" id="demochange" checked> <span>Demo: the store changes the price at checkout</span></label>
+    </p>
+  </footer>
+
+  <script src="lib/mandate.js"></script>
+  <script src="lib/catalog.js"></script>
+  <script src="lib/agent.js"></script>
+  <script src="lib/airwallex.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
